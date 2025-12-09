@@ -1,94 +1,103 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: 'Profile Configuration'
+description: 'Learn how we build your company profile.'
 ---
 
-<Info>
-  **Prerequisites**:
-  - Node.js version 19 or higher
-  - A docs repository with a `docs.json` file
-</Info>
+## Upload Your Product Catalog
 
-Follow these steps to install and run Mintlify on your operating system.
+Upload a complete, up-to-date product catalog so our AI can precisely extract and match inbound purchase orders, quotes, and line items. The richer and cleaner your catalog, the more accurate our matching and downstream automation will be.
 
-<Steps>
-<Step title="Install the Mintlify CLI">
+Use this section to upload:
 
-```bash
-npm i -g mint
-```
-</Step>
+- Full product lists (SKU, description, UOM, etc.)
+- Customer-specific contract items (if applicable)
+- Replacement SKUs or obsolete → active mappings
 
-<Step title="Preview locally">
+Endeavor continuously learns from this data and this is the foundation of accurate order entry.
 
-Navigate to your docs directory where your `docs.json` file is located, and run the following command:
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/product-upload.png"
+  alt="Admin Dashboard - Upload Product Catalog interface"
+/>
 
-```bash
-mint dev
-```
+## Create Groups
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+Organize your team into Groups to track performance in ways that reflect how you operate.
 
-</Step>
-</Steps>
+Common examples:
 
-## Custom ports
+- By region
+  - "California Division"
+  - "Midwest Branches"
+- By store or branch
+  - "Phoenix – Store 12"
+- By customer team or CAM ownership
+  - "Sidney — CAM 2 Team"
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. For example, to run Mintlify on port 3333, use this command:
+Groups allow you to filter analytics, drill into throughput, and understand performance across different parts of your organization.
 
-```bash
-mint dev --port 3333
-```
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/groups.png"
+  alt="Admin Dashboard - Create New Group modal"
+/>
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+## Roles
 
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
+Create roles that match how responsibilities are distributed across your team.
 
-## Mintlify versions
+Examples:
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local preview does not align with the production version, please update the CLI:
+- Admin
+  Full access to all orders, analytics, and system settings.
+- Standard
+  Typically has "View all orders" + "View all analytics" (fully customizable).
+- Custom Roles
+  Tailor permissions for unique workflows, such as:
+  - "CSR – Order Entry Only"
+  - "Manager – Approvals Required"
+  - "Pricing Locked / No Overrides"
 
-```bash
-npm mint update
-```
+Roles help maintain clean governance and ensure only the right people can submit, edit, or approve orders.
 
-## Validating links
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/roles-a.png"
+  alt="Admin Dashboard - Roles table view"
+/>
 
-The CLI can assist with validating links in your documentation. To identify any broken links, use the following command:
+<Columns cols={2}>
+  <div>
+    <p>Create a new role</p>
+    <img
+      style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+      src="/images/roles-b.png"
+      alt="Admin Dashboard - Create Role modal"
+    />
+  </div>
+  <div>
+    <p>Customize permissions for the role</p>
+    <img
+      style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+      src="/images/roles-c.png"
+      alt="Admin Dashboard - Role permissions"
+    />
+  </div>
+</Columns>
 
-```bash
-mint broken-links
-```
+## Users
 
-## Deployment
+Invite users by entering:
 
-If the deployment is successful, you should see the following:
+- Email address
+- Assigned role
+- Temporary password
 
-<Frame>
-  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
-</Frame>
+Once added, users will receive login instructions and be prompted to create their own password. From there, they can begin processing orders, reviewing matched line items, and contributing to AI accuracy.
 
-## Code formatting
-
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
-
-## Troubleshooting
-
-<AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of the CLI: `npm remove -g mint`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall the CLI: `npm i -g mint`
-  </Accordion>
-
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the `~/.mintlify` folder. Then run `mint dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in the latest CLI version? Check out the [CLI changelog](https://www.npmjs.com/package/mintlify?activeTab=versions).
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/users.png"
+  alt="Admin Dashboard - Users table"
+/>

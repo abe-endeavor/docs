@@ -1,0 +1,24 @@
+/* Custom navigation line styling */
+/* Make the active page indicator line white and more visible */
+nav a[aria-current="page"]::before,
+nav a.active::before,
+[data-active="true"]::before,
+.sidebar-nav-item-active::before {
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+/* Alternative selectors for navigation line */
+nav li[aria-current="page"]::before,
+.sidebar-item-active::before {
+  background-color: white !important;
+  border-left-color: white !important;
+}
+
+/* Ensure visibility with a subtle shadow or border if needed */
+nav a[aria-current="page"],
+nav a.active,
+[data-active="true"] {
+  border-left: 2px solid white !important;
+}
+

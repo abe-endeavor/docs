@@ -1,35 +1,60 @@
 ---
-title: 'Code blocks'
-description: 'Display inline code and code blocks'
-icon: 'code'
+title: "Analytics"
+description: "Endeavor's analytics dashboard gives you a clear view of how the Order Entry AI is performing across your organization. It highlights accuracy, speed, workload distribution, and where humans still intervene - so you can measure ROI, identify bottlenecks, and confidently scale automation."
 ---
 
-## Inline code
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/analytics-dashboard.png"
+  alt="Analytics dashboard - Order Entry and User Activity metrics"
+/>
 
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
+### Order Entry AI Accuracy
 
-```
-To denote a `word` or `phrase` as code, enclose it in backticks (`).
-```
+The percentage of all processed line items that required no human edits.
 
-## Code blocks
+### Total Lines Processed
 
-Use [fenced code blocks](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) by enclosing code in three backticks and follow the leading ticks with the programming language of your snippet to get syntax highlighting. Optionally, you can also write the name of your code after the programming language.
+The total number of line items processed by Endeavor during the selected time period.
 
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
+### Lines by AI
 
-````md
-```java HelloWorld.java
-class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-```
-````
+The number of line items fully processed by Endeavor without any CSR intervention.
+
+### Lines by Human
+
+The number of line items where a CSR made any manual edit—indicating the model required correction.
+
+### Extraction Accuracy
+
+Percentage of lines where Endeavor successfully extracted all required fields from the document.
+
+(Measures extraction → not product matching.)
+
+### Matching Accuracy
+
+Percentage of extracted lines that Endeavor correctly matched to the catalog without human edits.
+
+Lines corrected by CSRs count as mismatches.
+
+### Orders Processing
+
+The number of orders currently in the middle of extraction and matching.
+
+### Orders Queued
+
+Orders waiting in the queue to begin processing.
+
+### AI Accuracy Over Time
+
+A time-series view showing how extraction and matching accuracy trends over the selected date range.
+
+### AI Processing Time by File Type
+
+Breakdown of average processing times for each file format (PDF, Excel, images, etc.).
+
+Helps diagnose slow or unusually large file types.
+
+### Average Round Trip Time
+
+The average time from when an order is uploaded to when extraction + matching completes.

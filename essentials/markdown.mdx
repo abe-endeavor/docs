@@ -1,88 +1,116 @@
 ---
-title: 'Markdown syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
+title: 'Order Entry AI'
+description: 'Process thousands of orders, slash manual entry, and eliminate mistakes with AI-powered order entry automation. Take orders in seconds, not hours'
 ---
 
-## Titles
+## Overview
 
-Best used for section headers.
+Endeavor's Order Entry Automation ingests purchase orders from email or manual drag-and-drop uploads, extracts and validates all line items against the product catalog, and generates fully processed ERP orders with minimal CSR input. CSRs can review, correct, and approve orders prior to final ERP submission.
 
-```md
-## Titles
-```
+## Step 1: Ingestion
+Endeavor supports both automated and manual ingestion, allowing teams to capture POs regardless of format or source.
+<Columns cols={2}>
+  <img
+    style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+    src="/images/email-agent.png"
+    alt="Embedded Email Client AI interface"
+  />
+  <img
+    style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+    src="/images/upload-orders.png"
+    alt="Upload Orders interface - Drag and drop zone"
+  />
+</Columns>
+<Columns cols={2}>
+  <div>
+    ### **Automatic inbox monitoring**
 
-### Subtitles
+    Forward POs to a designated address and Endeavor's Email Agent continuously scans for new orders.
+  </div>
+  <div>
+    ### **Drag-and-drop uploads**
 
-Best used for subsection headers.
+    CSRs can manually upload files directly in the web portal.
+  </div>
+</Columns>
 
-```md
-### Subtitles
-```
+<Columns cols={2}>
+  <div>
+    ### **Multi-format input support**
 
-<Tip>
+    Endeavor can ingest virtually any document a human could interpret, including:
 
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
+    - PDF
+    - Excel / CSV
+    - Email body text
+    - Images / phone photos
+    - Handwritten notes
+    - Word documents
+  </div>
+  <div>
+    ### **Embedded Email Client AI**
+    A chat-style AI side panel appears directly in Outlook or Gmail, enabling CSRs to:
+    - Trigger PO ingestion with one click
+    - Ask questions about the PO
+    - Request corrections or context
+    - Interact with the agent without leaving their inbox
+  </div>
+</Columns>
 
-</Tip>
 
-## Text formatting
+## Step 2: Extraction
 
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
+Once a PO is ingested, Endeavor’s extraction engine pulls out every required field and aligns it with your product catalog.
+### AI Extraction Includes
 
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
+- Item quantities
+- SKUs / product IDs
+- Product descriptions
+- Pricing 
+- Customer identifiers
+- Ship-to details
+- Delivery requirements
+- PO metadata
 
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
+### Validation Engine
 
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
+- Checks all items against your product catalog
+- Detects missing, invalid, or ambiguous fields
+- Flags mismatches and exceptions early
+- Learns corrections over time (self-improvement)
 
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/orders-dashboard.png"
+  alt="Orders dashboard - Order management interface"
+/>
 
-## Linking to pages
+## Step 3: Processing
 
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
+After extraction and validation, Endeavor prepares the order for ERP submission. 
 
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
+### Key Processing Capabilities
 
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
+- Catalog validation
+- ERP read/writeback
+- Real-time error detection
+- Exception handling for unknown items or custom logic
+- Review & confirm workflow
+- CSR approves or edits before submission
+- Revisions retrain the model
+- Order routing based on business rules
+- Supports pricing rules, contract accounts, custom ship-to mappings
 
-## Blockquotes
+### Review & Confirm Workflow
+Before anything is submitted to your ERP:
+- CSRs review the AI-generated order
+- They can edit line items or metadata
+- Any corrections retrain the model for future accuracy
 
-### Singleline
+Once approved, the order is pushed into the ERP as a fully processed, accurate transaction.
 
-To create a blockquote, add a `>` in front of a paragraph.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
-
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/extraction.png"
+  alt="AI Extraction - Material listing sheet to digital order interface"
+/>

@@ -3,9 +3,9 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FFFFFF",
+    "light": "#FFFFFF",
+    "dark": "#FFFFFF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -16,33 +16,28 @@
           {
             "group": "Get started",
             "pages": [
-              "index",
-              "quickstart",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Onboarding",
+            "pages": [
               "development"
             ]
           },
           {
-            "group": "Customization",
+            "group": "For Front Office",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              {
+                "group": "Order Entry",
+                "pages": [
+                  "essentials/markdown",
+                  "essentials/code"
+                ]
+              },
+              "essentials/voice-ai",
+              "essentials/quotes",
+              "essentials/cross-sell-upsell"
             ]
           }
         ]
