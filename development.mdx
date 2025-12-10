@@ -67,24 +67,14 @@ Roles help maintain clean governance and ensure only the right people can submit
   alt="Admin Dashboard - Roles table view"
 />
 
-<Columns cols={2}>
-  <div>
-    <p>Create a new role</p>
-    <img
-      style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
-      src="/images/roles-b.png"
-      alt="Admin Dashboard - Create Role modal"
-    />
-  </div>
-  <div>
-    <p>Customize permissions for the role</p>
-    <img
-      style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
-      src="/images/roles-c.png"
-      alt="Admin Dashboard - Role permissions"
-    />
-  </div>
-</Columns>
+<div>
+  <p>Create a new role</p>
+  <img
+    style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+    src="/images/roles-b.png"
+    alt="Admin Dashboard - Create Role modal"
+  />
+</div>
 
 ## Users
 
@@ -101,3 +91,30 @@ Once added, users will receive login instructions and be prompted to create thei
   src="/images/users.png"
   alt="Admin Dashboard - Users table"
 />
+
+<p>Customize permissions for the role</p>
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/roles-c.png"
+  alt="Admin Dashboard - Role permissions"
+/>
+
+### Analytics Permissions
+
+- **View Own Analytics** — See only your own performance data (lines processed, accuracy, order activity).
+- **View Group Analytics** — See analytics for your assigned group (team, region, or CSR pod).
+- **View All Analytics** — See analytics across the entire organization.
+
+### Order Permissions
+
+- **View Own Orders** — See only orders you personally uploaded, reviewed, or processed.
+- **View Group Orders** — See all orders handled by anyone in your assigned group.
+- **View All Orders** — See all orders across the entire organization.
+
+### Group Management Permissions
+
+- **Create Groups** — Create new groups (e.g., "West Region", "Inside Sales Team A").
+- **View Groups** — See a list of all existing groups and their metadata.
+- **Update Groups** — Rename groups or modify group details.
+- **Delete Groups** — Remove groups from the organization.
+- **Add/Remove Users to Groups** — Assign or remove users from group membership.
