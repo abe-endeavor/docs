@@ -37,7 +37,8 @@
               },
               "essentials/voice-ai",
               "essentials/quotes",
-              "essentials/cross-sell-upsell"
+              "essentials/cross-sell-upsell",
+              "research"
             ]
           }
         ]
