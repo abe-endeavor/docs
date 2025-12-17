@@ -1,0 +1,211 @@
+---
+title: "Web App"
+description: ""
+---
+
+### Step 1: Open Endeavor Portal
+
+Navigate to [app.endeavorai.com](https://app.endeavorai.com)
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/login-portal.png"
+  alt="Endeavor Sales Order Entry Portal login screen"
+/>
+
+### Step 2: Login Credentials in Email
+
+You should have received an email titled "Welcome to Omelas by Endeavor AI". There you will find your username and temporary password.
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/credentials-email.png"
+  alt="Welcome email with login credentials from Endeavor AI"
+/>
+
+Copy and paste the username and password into their respective fields in the web portal. It will prompt you to create a temporary password, please follow the directions listed in the email on password requirements.
+
+### Step 3: Make Your First Order
+
+You'll land on the Orders page (it should be blank since we haven't created any orders yet). All orders we make will be located here.
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/order-tab.png"
+  alt="Endeavor Orders page - Empty orders table"
+/>
+
+Click the Add Order button located in the top right
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/add-order.png"
+  alt="Add Order button highlighted in the top right"
+/>
+
+It will take you to the "Upload Orders" screen, which looks like this
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/upload-order.png"
+  alt="Upload Orders screen with drag and drop file upload"
+/>
+
+Let's upload an order. We can process multiple at once, so upload as many as needed.
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/docs-upload.png"
+  alt="File upload dialog showing multiple PDF files selected"
+/>
+
+<span style={{ color: 'grey' }}>You can drag and drop by holding SHIFT while dragging the selected items into the portal or just click OPEN. You should see the items processed below. Then click "Open Orders" to view the results.</span>
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/up-orders.png"
+  alt="Uploaded files showing successfully uploaded orders"
+/>
+
+You should see the orders you uploaded. Note: The processing time depends on how large the orders are, but usually processes within seconds to a few minutes
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/processed.png"
+  alt="Orders table showing processed orders"
+/>
+
+### Step 4: Review Order
+
+Let's open an order by clicking on one. You should see this screen, with the order attachment on the left and extracted information on the right.
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/order.png"
+  alt="Order review screen with document viewer and extracted order information"
+/>
+
+If you have more than one attachment, this dropdown will allow you toggle between them
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/attachment.png"
+  alt="Dropdown menu showing multiple attachment options"
+/>
+
+Let's review what the extract columns indicate below
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/columns.png"
+  alt="Order items table with columns highlighted"
+/>
+
+**Order Item Columns**
+
+1. No. → the order in which the line item appears on the PO
+2. Description → the extracted description from the order attachment
+3. Qty → how many of this item is requested
+4. Product Name → the product name from catalog matched using the extracted description from the purchase order.
+
+If the matched product is wrong, select the product ID, and it should pull this screen up
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/manual.png"
+  alt="Product Matches modal for selecting or searching products"
+/>
+
+The highlighted area shows the current **Extract Description** and **Product ID**. To change the match, search for the correct Product ID name in the search box. Then select the correct item.
+
+*Note: this is pulled directly from your ERP and updated daily.*
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/search.png"
+  alt="Product search interface showing search results"
+/>
+
+If you search for a product and it does not appear (rare error), add the product manually
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/add.png"
+  alt="Add Product Manually button"
+/>
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/enter.png"
+  alt="Manual product entry form"
+/>
+
+Our AI will learn from the corrections and improve future accuracy.
+
+### Step 5: Editing an Order
+
+**To manually add or remove rows**
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/edit.png"
+  alt="Order items table with add/remove row controls"
+/>
+
+1. Use the "Add Item" to add a line. It will default to being added to the bottom of list.
+2. Use the + or - toggle by *hovering* over a row.
+
+**Highlighted Rows**
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/h.png"
+  alt="Order items table showing highlighted rows"
+/>
+
+- Yellow = Zero or negative quantity
+- Blue = Edited lines
+- Red = No match
+
+**Header Information**
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/headr.png"
+  alt="Order Information section with form fields"
+/>
+
+Click the "Order Information" section and a dropdown will appear. Most of the information is extracted directly from the uploaded order.
+
+- Company Name = Company Name listed on the order
+- Customer Reference = associated customer ID from ERP
+- Delivery Address = connected address to customer ID in ERP
+- Requested Delivery Date = delivery date extracted from order
+- Purchase Order Number = po number from order
+
+### Step 6: Finalize Order & Send to ERP
+
+Once all information is filled and you're ready to enter it into the ERP, click "Approve"
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/approve.png"
+  alt="Order approval interface with Enter into ERP button"
+/>
+
+The screen will turn to Read-only (which means you cannot edit).
+
+- If you're ready to finalize the order to your ERP, click "Enter into ERP"
+
+- If you realize a change needs to be made, click "Restore" on the bottom right
+
+<img
+  style={{ borderRadius: '0.5rem', width: '100%', opacity: 1 }}
+  src="/images/enter-erp.png"
+  alt="Read-only order view with Enter into ERP and Restore buttons"
+/>
+
+### Step 7: Celebrate
+
+Hooray!! You just learned how to create orders in Endeavor😊 We hope this tool and other we roll out to you guys will make your life much easier!
+

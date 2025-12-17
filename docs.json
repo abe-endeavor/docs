@@ -14,7 +14,7 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get started",
+            "group": "Overview",
             "pages": [
               "quickstart"
             ]
@@ -23,6 +23,14 @@
             "group": "Onboarding",
             "pages": [
               "development"
+            ]
+          },
+          {
+            "group": "For CSRs",
+            "pages": [
+              "csrs-get-started",
+              "csrs-using-web-app",
+              "csrs-using-email-client"
             ]
           },
           {
